@@ -17,7 +17,7 @@ public class Controller {
     private ServiceClass serviceClass;
 
     @RequestMapping(value = "/getStudent/{id}", method = RequestMethod.GET)
-    public Student getStudent(@PathVariable("id") int id) throws Exception{
+    public Student getStudent(@PathVariable("id") Long id) throws Exception{
         try {
             return serviceClass.getStudent(id);
         }catch (Exception c) {
